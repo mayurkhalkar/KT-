@@ -1,0 +1,13 @@
+Here’s a Knowledge Transfer (KT) plan structured over five days, focusing on one topic per day for 1 hour each from 3-4 pm. The plan is presented in a tabular form:
+
+| **Day** | **Date** | **Time**  | **Topic**                                          | **Agenda**                                                                                      | **Materials**                        | **Presenter** |
+|---------|----------|-----------|----------------------------------------------------|-------------------------------------------------------------------------------------------------|--------------------------------------|---------------|
+| Day 1   | [Date]   | 3:00-4:00 pm | **IICS Architecture**                             | Overview of Informatica Intelligent Cloud Services (IICS) architecture, components, and data flow.| Architecture diagrams, PPTs          | [Presenter Name]|
+| Day 2   | [Date]   | 3:00-4:00 pm | **IICS Development Strategies and Reusable Components** | Best practices in IICS development, creation of reusable components like templates, tasks, and workflows.| Demo, Sample projects, PPTs           | [Presenter Name]|
+| Day 3   | [Date]   | 3:00-4:00 pm | **GCP Architecture & GCP Cloud Storage**           | Deep dive into Google Cloud Platform architecture, services, and cloud storage solutions.         | Architecture diagrams, documentation | [Presenter Name]|
+| Day 4   | [Date]   | 3:00-4:00 pm | **BQ Architecture and User Interaction**           | Introduction to BigQuery architecture, data ingestion, query execution, and user interaction.    | Diagrams, demo queries               | [Presenter Name]|
+| Day 5   | [Date]   | 3:00-4:00 pm | **IICS Reusable Mappings & DEV Engineering Framework** | Detailed session on reusable mappings in IICS and the development engineering framework.         | Example mappings, framework documents| [Presenter Name]|
+
+*Note: Replace "[Date]" and "[Presenter Name]" with the actual dates and presenter names.*
+
+This plan ensures a focused discussion on each topic, allowing participants to grasp each subject thoroughly.
