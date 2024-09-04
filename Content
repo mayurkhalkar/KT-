@@ -1,0 +1,120 @@
+Certainly! Here's a detailed explanation for each point in the KT sessions:
+
+---
+
+### **Day 1: IICS Architecture**
+**Agenda:**
+1. **Introduction to IICS:**
+   - **Overview of IICS:** IICS (Informatica Intelligent Cloud Services) is a suite of cloud-based data management services. It enables organizations to integrate, manage, and transform data across cloud and on-premise environments.
+   - **Key Features and Benefits:** IICS offers features like ETL (Extract, Transform, Load), data quality, application integration, API management, and data governance. It supports high scalability, flexibility, and ease of use.
+   - **Role in Modern Data Management:** IICS plays a crucial role in helping organizations to leverage data for analytics, ensuring data quality and governance, and enabling seamless integration across various data sources.
+
+2. **Architecture Overview:**
+   - **Core Components:** IICS comprises several key components:
+     - **Secure Agent:** A lightweight program installed on-premise or on cloud VMs that facilitates secure data integration between cloud and on-premise environments.
+     - **Cloud Repository:** Stores metadata related to the integration jobs, mappings, and configurations.
+     - **Services:** Various services like Data Integration, API Integration, and Data Quality that perform specific tasks within the IICS ecosystem.
+   - **Multi-Tenant Architecture:** IICS operates on a multi-tenant architecture, meaning multiple customers (tenants) can share the same physical resources while keeping their data separate and secure.
+   - **Data Flow within IICS:** The data flow typically involves extracting data from a source, transforming it according to business rules, and then loading it into a target system.
+   - **Security and Compliance Considerations:** IICS includes various security features such as data encryption, access controls, and compliance with industry standards (e.g., GDPR, HIPAA).
+
+3. **Deployment Models:**
+   - **On-Premise vs Cloud-Based Deployment:** IICS can be deployed entirely in the cloud or in a hybrid setup where the Secure Agent runs on-premise to access local data.
+   - **Hybrid Deployment Strategies:** Hybrid deployments allow for the flexibility of cloud services while keeping sensitive data on-premise.
+
+4. **Use Cases:**
+   - **Common Use Cases:** Examples include cloud data warehousing, real-time data integration, API management, and cross-application data synchronization.
+
+---
+
+### **Day 2: IICS Development Strategies and Reusable Components**
+**Agenda:**
+1. **Development Best Practices:**
+   - **Modular Approach:** Break down complex data integration tasks into smaller, reusable modules. This improves maintainability and reusability.
+   - **Parameterization:** Use parameters to make mappings and workflows more flexible. Parameters allow you to change values without modifying the underlying logic, which is crucial for reuse across different environments.
+   - **Error Handling and Logging:** Implement robust error handling mechanisms to capture and log errors during job execution. This ensures that issues can be quickly identified and resolved.
+
+2. **Reusable Components:**
+   - **Reusable Mappings and Workflows:** Create mappings and workflows that can be reused across different projects. For example, a reusable mapping might handle common data transformations or validations.
+   - **Design Templates:** Develop templates for common tasks such as data cleansing or data migration. Templates save development time and ensure consistency.
+   - **Template Designer in IICS:** The Template Designer tool in IICS allows developers to create and manage reusable components, which can be used as building blocks for other mappings.
+
+3. **Performance Optimization:**
+   - **Optimizing Jobs:** Optimize performance by tuning the data flow, using partitioning to parallelize tasks, and employing pushdown optimization to push processing to the database level where possible.
+   - **Partitioning and Pushdown:** Partitioning divides data into smaller subsets for parallel processing, while pushdown optimization allows SQL transformations to be executed directly in the database.
+
+4. **Version Control and Collaboration:**
+   - **Version Control:** Use version control to track changes in mappings and workflows. This helps in maintaining different versions and allows rollbacks if needed.
+   - **Collaborative Development:** Encourage collaborative development practices, such as code reviews and shared repositories, to improve code quality and team efficiency.
+
+---
+
+### **Day 3: GCP Architecture & GCP Cloud Storage**
+**Agenda:**
+1. **Introduction to GCP:**
+   - **Overview of GCP:** Google Cloud Platform (GCP) is a suite of cloud computing services that runs on the same infrastructure that Google uses internally for its end-user products, such as Google Search and YouTube.
+   - **GCP’s Global Network:** GCP offers a global network of data centers, allowing users to run applications and store data with high availability and low latency.
+
+2. **GCP Architecture:**
+   - **Core Components:**
+     - **Compute Engine:** GCP's IaaS service that provides virtual machines.
+     - **Kubernetes Engine:** Managed Kubernetes service for deploying, managing, and scaling containerized applications.
+     - **Cloud Functions:** Serverless compute service that runs code in response to events.
+   - **Network Architecture:** GCP’s network includes Virtual Private Clouds (VPCs), Subnets, and Firewalls that secure and manage network traffic.
+   - **Security in GCP:** GCP includes Identity and Access Management (IAM) for controlling access, encryption for data protection, and compliance with regulations like GDPR.
+
+3. **GCP Cloud Storage:**
+   - **Overview of Storage Options:**
+     - **Cloud Storage:** Object storage for storing and retrieving any amount of data at any time.
+     - **Persistent Disks:** Block storage for virtual machines.
+     - **Filestore:** Managed file storage service.
+   - **Storage Classes:**
+     - **Standard:** High-performance storage for frequently accessed data.
+     - **Nearline:** Low-cost storage for data that is accessed less than once a month.
+     - **Coldline:** Even lower-cost storage for data accessed less than once a year.
+     - **Archive:** Lowest cost, long-term storage.
+   - **Best Practices:** Use lifecycle management to automate transitions between storage classes and enable versioning to retain previous versions of objects.
+
+4. **Integration with Other Services:**
+   - **Integration Examples:** Cloud Storage can be integrated with BigQuery for data analytics, Dataflow for data processing, and AI/ML services for data-driven insights.
+   - **Real-World Use Cases:** Examples might include backups and archival, serving content globally, and storing big data for analytics.
+
+---
+
+### **Day 4: BQ Architecture and User Interaction**
+**Agenda:**
+1. **Introduction to BigQuery:**
+   - **Overview of BigQuery:** BigQuery is Google’s fully-managed, serverless data warehouse that enables super-fast SQL queries using the processing power of Google's infrastructure.
+   - **Key Features:** Scalability, cost-effectiveness, and ability to handle petabytes of data. It’s designed for analyzing data quickly and efficiently.
+
+2. **BigQuery Architecture:**
+   - **Internal Architecture:** BigQuery uses a columnar storage format which organizes data in columns, optimizing for read-heavy workloads. Dremel is the underlying architecture that powers BigQuery’s ability to execute queries across petabytes of data.
+   - **Query Execution Process:** Queries in BigQuery are executed in a distributed manner. The data is spread across many machines, and the query is broken down into smaller tasks that run in parallel, making the query process highly efficient.
+
+3. **User Interaction:**
+   - **Querying Data:** Users interact with BigQuery using standard SQL. The web UI, REST API, or command-line tools are available for querying.
+   - **Loading Data:** Data can be loaded into BigQuery from various sources such as Cloud Storage, Google Drive, or directly via SQL queries. Loading options include batch and streaming methods.
+   - **BigQuery UI:** The BigQuery web UI allows users to write, run, and manage SQL queries, view results, and manage datasets and tables.
+
+4. **Advanced Features:**
+   - **BigQuery ML:** Allows users to create and execute machine learning models using SQL queries within BigQuery.
+   - **Geo Analytics:** Geospatial analysis capabilities to run spatial queries on geographic data.
+   - **BI Engine:** A fast, in-memory analysis service for interactive analysis with BigQuery.
+   - **Query Optimization and Cost Management:** Tips on optimizing query performance (e.g., using partitioned tables) and managing costs by monitoring query execution and storage usage.
+
+---
+
+### **Day 5: IICS Reusable Mappings & DEV Engineering Framework**
+**Agenda:**
+1. **Reusable Mappings in IICS:**
+   - **Introduction to Reusable Mappings:** Reusable mappings are mapping logic that can be saved and reused across multiple data integration tasks. This reduces redundancy, increases consistency, and improves maintenance.
+   - **Creating Reusable Mappings:** You can create reusable mappings in IICS by designing a mapping once and then referencing it in multiple tasks. This is particularly useful for common data transformations or aggregations.
+   - **Examples of Reusable Mappings:** Examples might include mappings for standard data validations, data cleansing, or common ETL transformations.
+
+2. **Development Engineering Framework:**
+   - **Overview of Development Engineering Framework:** A framework that standardizes development practices across the team. It includes coding standards, design principles, testing protocols, and documentation requirements.
+   - **Importance of Standardization:** Standardization ensures that code is consistent, maintainable, and easier to debug. It also facilitates collaboration within teams and across different projects.
+   - **Key Components:** Coding standards (e.g., naming conventions), documentation templates, testing strategies (unit tests, integration tests), and deployment guidelines.
+
+3. **Framework Implementation:**
+   - **Implementing the Framework in IICS:** Guidelines for applying the framework in IICS include adhering to naming conventions for mappings and workflows, documenting every task with metadata, and using version control for
